@@ -1,0 +1,26 @@
+Command Log:
+
+1. Create Blueprint:
+   - Tool: create_blueprint
+   - Server: unrealMCP
+   - Arguments: {"name": "BP_Cube_Logged", "parent_class": "Actor"}
+
+2. Add Component:
+   - Tool: add_component_to_blueprint
+   - Server: unrealMCP
+   - Arguments: {"blueprint_name": "BP_Cube_Logged", "component_type": "StaticMeshComponent", "component_name": "CubeMesh_Logged"}
+
+3. Set Static Mesh Properties:
+   - Tool: set_static_mesh_properties
+   - Server: unrealMCP
+   - Arguments: {"blueprint_name": "BP_Cube_Logged", "component_name": "CubeMesh_Logged", "static_mesh": "/Engine/BasicShapes/Cube.Cube"}
+
+4. Compile Blueprint:
+   - Tool: compile_blueprint
+   - Server: unrealMCP
+   - Arguments: {"blueprint_name": "BP_Cube_Logged"}
+
+5. Spawn Blueprint Actor:
+   - Tool: spawn_blueprint_actor
+   - Server: unrealMCP
+   - Arguments: {"blueprint_name": "BP_Cube_Logged", "actor_name": "MyCubeInstance_Logged", "location": [0, 0, 100]}

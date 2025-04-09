@@ -1,0 +1,73 @@
+[
+  {
+    "action": "Create Blueprint",
+    "step": 1,
+    "tool": "create_blueprint",
+    "server": "unrealMCP",
+    "arguments": {
+      "name": "BP_Cube_Json",
+      "parent_class": "Actor"
+    }
+  },
+  {
+    "action": "Add Component",
+    "step": 2,
+    "tool": "add_component_to_blueprint",
+    "server": "unrealMCP",
+    "arguments": {
+      "blueprint_name": "BP_Cube_Json",
+      "component_type": "StaticMeshComponent",
+      "component_name": "CubeMesh_Json"
+    }
+  },
+  {
+    "action": "Set Static Mesh Properties",
+    "step": 3,
+    "tool": "set_static_mesh_properties",
+    "server": "unrealMCP",
+    "arguments": {
+      "blueprint_name": "BP_Cube_Json",
+      "component_name": "CubeMesh_Json",
+      "static_mesh": "/Engine/BasicShapes/Cube.Cube"
+    }
+  },
+  {
+    "action": "Compile Blueprint",
+    "step": 4,
+    "tool": "compile_blueprint",
+    "server": "unrealMCP",
+    "arguments": {
+      "blueprint_name": "BP_Cube_Json"
+    }
+  },
+  {
+    "action": "Spawn Blueprint Actor 1",
+    "step": 5,
+    "tool": "spawn_blueprint_actor",
+    "server": "unrealMCP",
+    "arguments": {
+      "blueprint_name": "BP_Cube_Json",
+      "actor_name": "MyCubeInstance_Json_1",
+      "location": [
+        0,
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "action": "Spawn Blueprint Actor 2",
+    "step": 6,
+    "tool": "spawn_blueprint_actor",
+    "server": "unrealMCP",
+    "arguments": {
+      "blueprint_name": "BP_Cube_Json",
+      "actor_name": "MyCubeInstance_Json_2",
+      "location": [
+        200,
+        0,
+        100
+      ]
+    }
+  }
+]
